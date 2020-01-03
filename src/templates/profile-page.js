@@ -4,7 +4,19 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const ProfilePageTemplate = ({ title, content, contentComponent }) => {
+// 関数コンポーネント
+function Skils(props) {
+  const components = props.skil.map((skil) =>
+    <div>
+      <p>{skil.type}</p>
+      <div dangerouslySetInnerHTML={{ __html: skil.skils }} />
+    </div>
+  );
+
+  return components;
+}
+
+export const ProfilePageTemplate = ({ title, content, skil, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -18,6 +30,7 @@ export const ProfilePageTemplate = ({ title, content, contentComponent }) => {
               </h2>
               <PageContent className="content" content={content} />
             </div>
+            <Skils skil={skil} />
           </div>
         </div>
       </div>
@@ -29,6 +42,7 @@ ProfilePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  skil: PropTypes.array,
 }
 
 const ProfilePage = ({ data }) => {
@@ -40,11 +54,13 @@ const ProfilePage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        skil={post.frontmatter.skil}
       />
     </Layout>
   )
 }
 
+// propTypes 型チェック
 ProfilePage.propTypes = {
   data: PropTypes.object.isRequired,
 }
@@ -57,6 +73,10 @@ export const ProfilePageQuery = graphql`
       html
       frontmatter {
         title
+        skil {
+          type
+          skils
+        }
       }
     }
   }
