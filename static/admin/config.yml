@@ -36,7 +36,10 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "profile-page"}
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
-          - {label: Skil, name: skil, widget: list, fields: [{label: Type, name: type, widget: string}, {label: Skils, name: skils, widget: markdown}]}
+          - {label: Skil, name: skil, widget: list, fields: [
+              {label: Type, name: type, widget: string},
+              {label: SkilName, name: skilname, widget: list, field:{label: Name, name: Name, widget: string}}
+            ]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
