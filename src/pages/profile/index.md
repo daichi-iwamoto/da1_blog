@@ -6,6 +6,10 @@ skil:
       - React
       - Vue
     type: フレームワーク
+  - skilname:
+      - PHP
+      - HTML
+    type: 言語
 ---
 
 ### Test
