@@ -3,10 +3,12 @@ templateKey: profile-page
 title: Profile
 skil:
   - skils: |-
-      Vue
+      vue
 
-      React
+      react
     type: フレームワーク
+  - skils: '**PHP**'
+    type: 言語
 ---
 
 ### Test
