@@ -1,7 +1,12 @@
 ---
-templateKey: 'profile-page'
-path: /profile
+templateKey: profile-page
 title: Profile
+skil:
+  - skils: |-
+      Vue
+
+      React
+    type: フレームワーク
 ---
 
 ### Test
