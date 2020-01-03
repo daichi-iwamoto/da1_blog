@@ -5,11 +5,23 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 // 関数コンポーネント
+function SkilName(props) {
+  const skils = props.skil.map((name) =>
+    <p>{name}</p>
+  );
+
+  return (
+    <div>
+      {skils}
+    </div>
+  )
+}
+
 function Skils(props) {
   const components = props.skil.map((skil) =>
     <div>
-      <p>{skil.type}</p>
-      <div dangerouslySetInnerHTML={{ __html: skil.skils }} />
+      <p>【type】{skil.type}</p>
+      <SkilName skil={skil.skilname} />
     </div>
   );
 
@@ -75,7 +87,7 @@ export const ProfilePageQuery = graphql`
         title
         skil {
           type
-          skils
+          skilname
         }
       }
     }
