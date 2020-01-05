@@ -4,23 +4,24 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-// 関数コンポーネント
+// 関数コンポーネント（Skilの各名称）
 function SkilName(props) {
   const skils = props.skil.map((name) =>
     <p>{name}</p>
   );
 
   return (
-    <div>
+    <div className="skil-name">
       {skils}
     </div>
   )
 }
 
+// 関数コンポーネント（スキルの種類）
 function Skils(props) {
   const components = props.skil.map((skil) =>
-    <div>
-      <p>【type】{skil.type}</p>
+    <div className="skils">
+      <p className="skil-type">{skil.type}</p>
       <SkilName skil={skil.skilname} />
     </div>
   );
@@ -32,7 +33,7 @@ export const ProfilePageTemplate = ({ title, content, skil, contentComponent }) 
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
+    <section id="profile" className="section section--gradient">
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
