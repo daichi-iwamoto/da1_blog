@@ -1,3 +1,27 @@
+header {
+  width: 1100px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    text-align: center;
+  }
+  .links {
+    text-align: center;
+  }
+}
+
+footer {
+  width: 1100px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #profile {
   .skils {
     padding: 10px;
