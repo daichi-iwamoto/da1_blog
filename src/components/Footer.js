@@ -14,9 +14,9 @@ const Footer = class extends React.Component {
           </div>
           <div className="links">
             <Link to="/blog/"><p>Blog</p></Link>
-            <Link to="/blog/"><p>Diary</p></Link>
-            <Link to="/blog/"><p>Technical articles</p></Link>
-            <Link to="/blog/"><p>hobby</p></Link>
+            <Link to="/blog/"><p className="sub">Diary</p></Link>
+            <Link to="/blog/"><p className="sub">Technical articles</p></Link>
+            <Link to="/blog/"><p className="sub">Hobby</p></Link>
           </div>
         </div>
       </footer>

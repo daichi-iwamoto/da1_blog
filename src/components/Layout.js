@@ -2,7 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import './all.sass'
+// import './all.sass'
+import './reset.css'
 import './common.scss'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
@@ -50,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Header />
-      <div>{children}</div>
+      <div id="contents">{children}</div>
       <Footer />
     </div>
   )
