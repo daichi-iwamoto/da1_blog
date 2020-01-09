@@ -4,32 +4,32 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-// 関数コンポーネント（Skilの各名称）
-function SkilName(props) {
-  const skils = props.skil.map((name) =>
+// 関数コンポーネント（skillの各名称）
+function SkillName(props) {
+  const skills = props.skill.map((name) =>
     <p>{name}</p>
   );
 
   return (
-    <div className="skil-name">
-      {skils}
+    <div className="skill-name">
+      {skills}
     </div>
   )
 }
 
 // 関数コンポーネント（スキルの種類）
-function Skils(props) {
-  const components = props.skil.map((skil) =>
-    <div className="skils">
-      <p className="skil-type">{skil.type}</p>
-      <SkilName skil={skil.skilname} />
+function Skills(props) {
+  const components = props.skill.map((skills) =>
+    <div className="skills">
+      <p className="skill-type">{skills.type}</p>
+      <SkillName skill={skills.skillname} />
     </div>
   );
 
   return components;
 }
 
-export const ProfilePageTemplate = ({ title, content, skil, contentComponent }) => {
+export const ProfilePageTemplate = ({ title, content, skill, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -42,7 +42,9 @@ export const ProfilePageTemplate = ({ title, content, skil, contentComponent }) 
           </div>
           <PageContent className="comment" content={content} />
         </div>
-        <Skils skil={skil} />
+        <div className="skill-box">
+          <Skills skill={skill} />
+        </div>
       </div>
     </section>
   )
@@ -52,7 +54,7 @@ ProfilePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  skil: PropTypes.array,
+  skill: PropTypes.array,
 }
 
 const ProfilePage = ({ data }) => {
@@ -64,7 +66,7 @@ const ProfilePage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
-        skil={post.frontmatter.skil}
+        skill={post.frontmatter.skill}
       />
     </Layout>
   )
@@ -83,9 +85,9 @@ export const ProfilePageQuery = graphql`
       html
       frontmatter {
         title
-        skil {
+        skill {
           type
-          skilname
+          skillname
         }
       }
     }

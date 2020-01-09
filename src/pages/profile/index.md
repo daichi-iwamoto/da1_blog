@@ -1,16 +1,16 @@
 ---
 templateKey: profile-page
 title: Profile
-skil:
-  - skilname:
+skill:
+  - skillname:
       - React
       - Vue
     type: フレームワーク
-  - skilname:
+  - skillname:
       - PHP
       - HTML
     type: 言語
-  - skilname:
+  - skillname:
       - Git
     type: ツール
 ---

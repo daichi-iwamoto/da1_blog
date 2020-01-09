@@ -9,7 +9,7 @@ const ProfilePagePreview = ({ entry, widgetFor }) => {
     <ProfilePageTemplate
       title={data.title}
       content={widgetFor('body')}
-      skil={data.skil}
+      skill={data.skill}
     />
   )
   }
