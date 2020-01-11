@@ -9,20 +9,22 @@ import Content, { HTMLContent } from '../components/Content'
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
   helmet,
+  date,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <section id="posts">
       {helmet || ''}
-        <h1>
-          {title}
-        </h1>
-        <p>{description}</p>
+        <div className="post-title">
+          <h1>
+            {title}
+          </h1>
+          <p>{date}</p>
+        </div>
         <PostContent className="post-body" content={content} />
         {tags && tags.length ? (
           <div className="tag-box">
@@ -34,7 +36,7 @@ export const BlogPostTemplate = ({
                     <div className="hover-link">
                       <p>Go!</p>
                     </div>
-                    <p className="tagnamme">{tag}</p>
+                    <p className="tagname">{tag}</p>
                   </li>
                 </Link>
               ))}
@@ -48,9 +50,9 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  date: PropTypes.string,
 }
 
 const BlogPost = ({ data }) => {
@@ -61,7 +63,6 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -71,6 +72,7 @@ const BlogPost = ({ data }) => {
             />
           </Helmet>
         }
+        date={post.frontmatter.date}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />

@@ -162,8 +162,18 @@ footer {
 
 // 記事ページ
 #posts {
-  h1 {
-    font-size: 36px;
+  .post-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 30px 10px;
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 12px;
+      min-width: 80px;
+    }
   }
   .post-body {
     padding: 50px 0;
@@ -176,17 +186,9 @@ footer {
       padding: 20px;
       background-color: #2f3542;
       border-radius: 5px;
-      counter-reset: data-num;
       code {
-        counter-increment: data-num;
         background-color: #2f3542;
         color: #fff;
-        &::before {
-          content: counter(data-num);
-          padding-right: 5px;
-          margin-right: 10px;
-          border-right: solid 2px #ff6b81;
-        }
       }
     }
   }
@@ -230,7 +232,7 @@ footer {
             font-size: 12px;
           }
         }      
-        .tagnamme {
+        .tagname {
           padding: 10px;
           width: 120px;
           background-color: #fff;
@@ -256,10 +258,153 @@ footer {
           }
         }
         &:hover {
-          .tagnamme {
+          .tagname {
             transform: rotate(10deg);
             color: #ff4757;
             border: solid 1px #ff4757;
+            &::before {
+              border-top: solid 7.5px rgba($color: #000000, $alpha: 0);
+              border-right: solid 7.5px #ff4757;
+              border-bottom: solid 7.5px #ff4757;
+              border-left: solid 7.5px rgba($color: #000000, $alpha: 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Blogページ
+#blog {
+  h1 {
+    padding-bottom: 20px;
+  }
+  .blog-box {
+    width: 80%;
+    margin: 0 auto;
+    .posts {
+      display: flex;
+      justify-content: flex-end;
+      .hover-box {
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background-color: #ff4757;
+        color: #fff;
+      }
+      .blog-link {
+        width: 100%;
+        display: block;
+        transition: 0.5s;
+        article {
+          padding: 20px;
+          background-color: #fff;
+          .post-data {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .post-meta {
+              font-size: 20px;
+              font-weight: bold;
+            }
+            .post-date {
+              font-size: 12px;
+              min-width: 80px;
+            }
+          }
+        }
+        &:hover {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+// タグ一覧ページ
+#tags {
+  padding: 50px 0;
+  h1 {
+    font-size: 22px;
+    width: 100%;
+    padding-bottom: 25px;
+  }
+  .tag-box {
+    ul.taglist {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      li.tag-link {
+        position: relative;
+        text-align: center;
+        list-style: none;
+        margin-right: 10px;
+        .hover-link {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #ff4757;
+          color: #fff;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          p {
+            padding: 0 10px;
+            font-size: 12px;
+          }
+        }      
+        .tagname {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 15px;
+          width: 150px;
+          background-color: #fff;
+          color: #747d8c;
+          border: solid 1px #747d8c;
+          z-index: 2;
+          transform-origin: 100% 100%;
+          transition: 0.3s;
+          span {
+            font-size: 12px;
+            color: #fff;
+            padding: 0 5px;
+            margin-left: 10px;
+            background-color: #747d8c;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 15px;
+            height: 15px;
+            border-top: solid 7.5px rgba($color: #000000, $alpha: 0);
+            border-right: solid 7.5px #747d8c;
+            border-bottom: solid 7.5px #747d8c;
+            border-left: solid 7.5px rgba($color: #000000, $alpha: 0);
+          }
+          a {
+            color: #747d8c;
+          }
+        }
+        &:hover {
+          .tagname {
+            transform: rotate(10deg);
+            color: #ff4757;
+            border: solid 1px #ff4757;
+            span {
+              background-color: #ff4757;
+            }
             &::before {
               border-top: solid 7.5px rgba($color: #000000, $alpha: 0);
               border-right: solid 7.5px #ff4757;
