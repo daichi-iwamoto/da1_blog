@@ -23,15 +23,20 @@ export const BlogPostTemplate = ({
           {title}
         </h1>
         <p>{description}</p>
-        <PostContent content={content} />
+        <PostContent className="post-body" content={content} />
         {tags && tags.length ? (
           <div className="tag-box">
             <h4>Tags</h4>
             <ul className="taglist">
               {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
+                <Link to={`/tags/${kebabCase(tag)}/`}>
+                  <li className="tag-link" key={tag + `tag`}>
+                    <div className="hover-link">
+                      <p>Go!</p>
+                    </div>
+                    <p className="tagnamme">{tag}</p>
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
