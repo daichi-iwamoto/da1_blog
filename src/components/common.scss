@@ -1,6 +1,7 @@
 html {
   background-color: #57606f;
   scroll-behavior: smooth;
+  color: #57606f;
   body {
     background-color: #f1f2f6;
   }
@@ -154,6 +155,32 @@ footer {
         p {
           padding-left: 20px;
         }
+      }
+    }
+  }
+}
+
+// 記事ページ
+#posts {
+  h1 {
+    font-size: 36px;
+  }
+  .tag-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    flex-wrap: wrap;
+    h4 {
+      width: 100%;
+    }
+    ul.taglist {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      li {
+        list-style: none;
+        padding: 10px;
       }
     }
   }
