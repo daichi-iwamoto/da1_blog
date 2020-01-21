@@ -9,6 +9,7 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="blog-box">
+        <h3>最新記事</h3>
         {posts &&
           posts.map(({ node: post }) => (
             <div className="posts">
@@ -19,6 +20,9 @@ class BlogRoll extends React.Component {
                     <p className="post-meta">
                         {post.frontmatter.title}
                     </p>
+                    <p className="post-description">
+                        {post.frontmatter.description}
+                    </p>
                     <p className="post-date">
                       {post.frontmatter.date}
                     </p>
@@ -26,7 +30,8 @@ class BlogRoll extends React.Component {
                 </article>
               </Link>
             </div>
-          ))}
+          ))
+        }
       </div>
     )
   }
@@ -57,6 +62,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
+                description
                 date(formatString: "YYYY/MM/DD")
               }
             }

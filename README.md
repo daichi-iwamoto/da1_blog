@@ -127,4 +127,5 @@ please read the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## memo
 ?color?
-https://flatuicolors.com/palette/cn
+https://www.happyhues.co/palettes/15
+https://www.happyhues.co/palettes/13
