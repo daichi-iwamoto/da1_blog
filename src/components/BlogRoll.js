@@ -10,28 +10,29 @@ class BlogRoll extends React.Component {
     return (
       <div className="blog-box">
         <h3>最新記事</h3>
+        <div className="posts">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="posts">
-              <div className="hover-box">Read</div>
               <Link className="blog-link" to={post.fields.slug}>
                 <article>
                   <div className="post-data">
-                    <p className="post-meta">
-                        {post.frontmatter.title}
-                    </p>
+                    <div className="post-head">
+                      <p className="post-meta">
+                          {post.frontmatter.title}
+                      </p>
+                      <p className="post-date">
+                        {post.frontmatter.date}
+                      </p>
+                    </div>
                     <p className="post-description">
                         {post.frontmatter.description}
-                    </p>
-                    <p className="post-date">
-                      {post.frontmatter.date}
                     </p>
                   </div>
                 </article>
               </Link>
-            </div>
           ))
         }
+        </div>
       </div>
     )
   }
