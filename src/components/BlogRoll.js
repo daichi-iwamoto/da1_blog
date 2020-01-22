@@ -15,6 +15,7 @@ function Tags(props) {
           <article>
             <div className="post-data">
               <div className="post-head">
+                <img src={post.node.frontmatter.mainv.childImageSharp.fluid.src} alt="post-img" className="post-img" />
                 <p className="post-meta">
                     {post.node.frontmatter.title}
                 </p>
@@ -51,30 +52,33 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="blog-box">
-        <h3>最新記事</h3>
-        <div className="posts">
-        {posts &&
-          posts.map(({ node: post }) => (
-              <Link className="blog-link" to={post.fields.slug}>
-                <article>
-                  <div className="post-data">
-                    <div className="post-head">
-                      <p className="post-meta">
-                          {post.frontmatter.title}
-                      </p>
-                      <p className="post-date">
-                        {post.frontmatter.date}
+        <section>
+          <h3>New Posts</h3>
+          <div className="posts">
+          {posts &&
+            posts.map(({ node: post }) => (
+                <Link className="blog-link" to={post.fields.slug}>
+                  <article>
+                    <div className="post-data">
+                      <div className="post-head">
+                        <img src={post.frontmatter.mainv.childImageSharp.fluid.src} alt="post-img" className="post-img" />
+                        <p className="post-meta">
+                            {post.frontmatter.title}
+                        </p>
+                        <p className="post-date">
+                          {post.frontmatter.date}
+                        </p>
+                      </div>
+                      <p className="post-description">
+                          {post.frontmatter.description}
                       </p>
                     </div>
-                    <p className="post-description">
-                        {post.frontmatter.description}
-                    </p>
-                  </div>
-                </article>
-              </Link>
-          ))
-        }
-        </div>
+                  </article>
+                </Link>
+            ))
+          }
+          </div>
+        </section>
         <Tags data={posts} tag={"test"} />
         <Tags data={posts} tag={"code"} />
       </div>
@@ -109,6 +113,13 @@ export default () => (
                 templateKey
                 description
                 date(formatString: "YYYY/MM/DD")
+                mainv {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
+                  }
+                }
                 tags
               }
             }

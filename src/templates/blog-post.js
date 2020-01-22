@@ -9,6 +9,7 @@ import Content, { HTMLContent } from '../components/Content'
 export const BlogPostTemplate = ({
   content,
   contentComponent,
+  mainv,
   tags,
   title,
   helmet,
@@ -19,11 +20,14 @@ export const BlogPostTemplate = ({
   return (
     <section id="posts">
       {helmet || ''}
-      <div className="post-title">
-        <h1>
-          {title}
-        </h1>
-        <p>投稿日：{date}</p>
+      <div className="title-box">
+        <img src={mainv.childImageSharp.fluid.src} alt="mainv" className="mainv" />
+        <div className="post-title">
+          <h1>
+            {title}
+          </h1>
+          <p>投稿日：{date}</p>
+        </div>
       </div>
       {tags && tags.length ? (
       <div className="tag-box">
@@ -44,6 +48,7 @@ export const BlogPostTemplate = ({
 }
 
 BlogPostTemplate.propTypes = {
+  mainv: PropTypes.object,
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
@@ -71,6 +76,7 @@ const BlogPost = ({ data }) => {
         date={post.frontmatter.date}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        mainv={post.frontmatter.mainv}
       />
     </Layout>
   )
@@ -91,6 +97,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "YYYY/MM/DD")
+        mainv {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
         title
         description
         tags
