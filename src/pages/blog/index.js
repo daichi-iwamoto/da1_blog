@@ -9,7 +9,7 @@ export default class BlogIndexPage extends React.Component {
       <Layout>
         <div id="blog">
           <h1>
-            Blog
+            記事一覧
           </h1>
           <section>
             <BlogRoll />
