@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProfilePageTemplate } from '../../templates/index-page'
+import { IndexPageTemplate } from '../../templates/index-page'
 
-const ProfilePagePreview = ({ entry, widgetFor }) => {
+const IndexPagePreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
 
   return (
-    <ProfilePageTemplate
+    <IndexPageTemplate
       title={data.title}
       content={widgetFor('body')}
       skill={data.skill}
@@ -14,11 +14,11 @@ const ProfilePagePreview = ({ entry, widgetFor }) => {
   )
   }
 
-ProfilePagePreview.propTypes = {
+IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default ProfilePagePreview
+export default IndexPagePreview

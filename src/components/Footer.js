@@ -7,7 +7,7 @@ const Footer = class extends React.Component {
       <footer id="footer">
         <div className="footer-box">
           <div className="links">
-            <Link to="/page-2/"><p>Profile</p></Link>
+            <Link to="/"><p>Top</p></Link>
           </div>
           <div className="links">
             <Link to="/blog/"><p>Blog</p></Link>

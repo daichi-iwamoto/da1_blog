@@ -29,11 +29,11 @@ function Skills(props) {
   return components;
 }
 
-export const ProfilePageTemplate = ({ title, content, skill, contentComponent }) => {
+export const IndexPageTemplate = ({ title, content, skill, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section id="profile">
+    <section id="index">
       <div className="mainv"></div>
       <div className="contents">
         <div className="intro">
@@ -50,19 +50,19 @@ export const ProfilePageTemplate = ({ title, content, skill, contentComponent })
   )
 }
 
-ProfilePageTemplate.propTypes = {
+IndexPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   skill: PropTypes.array,
 }
 
-const ProfilePage = ({ data }) => {
+const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <ProfilePageTemplate
+      <IndexPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -73,14 +73,14 @@ const ProfilePage = ({ data }) => {
 }
 
 // propTypes 型チェック
-ProfilePage.propTypes = {
+IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default ProfilePage
+export default IndexPage
 
-export const ProfilePageQuery = graphql`
-  query ProfilePage($id: String!) {
+export const IndexPageQuery = graphql`
+  query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
