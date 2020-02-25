@@ -21,7 +21,7 @@ export const BlogPostTemplate = ({
     <section id="posts">
       {helmet || ''}
       <div className="title-box">
-        <img src={mainv.childImageSharp.fluid.src} alt="mainv" className="mainv" />
+        <img src={mainv} alt="mainv" className="mainv" />
         <div className="post-title">
           <h1>
             {title}
@@ -76,7 +76,7 @@ const BlogPost = ({ data }) => {
         date={post.frontmatter.date}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        mainv={post.frontmatter.mainv}
+        mainv={post.frontmatter.mainv.childImageSharp.fluid.src}
       />
     </Layout>
   )

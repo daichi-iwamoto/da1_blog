@@ -6,7 +6,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => (
   <BlogPostTemplate
     content={widgetFor('body')}
     description={entry.getIn(['data', 'description'])}
-    mainv={entry.getIn(['data', 'mainv'])}
+    mainv={this.prpps.getAsset(entry.getIn(['data', 'mainv']))}
     tags={entry.getIn(['data', 'tags'])}
     title={entry.getIn(['data', 'title'])}
   />
