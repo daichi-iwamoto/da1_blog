@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, widgetFor, getAsset }) => {
-  const data = entry.getIn(['data']).toJS()
+  let data = entry.getIn(['data']).toJS()
+  data.skill.map((val) =>
+    val.skillname.map((skills) => 
+      skills.img.childImageSharp.fluid.src = getAsset(skills.img)
+    )
+  )
 
   return (
     <IndexPageTemplate

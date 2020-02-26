@@ -8,6 +8,7 @@ import Content, { HTMLContent } from '../components/Content'
 function SkillName(props) {
   const skills = props.skill.map((val) =>
     <div className="skill-name">
+      <img src={val.img.childImageSharp.fluid.src} alt={val.name} />
       <p>{val.name}</p>
       <p>{val.detail}</p>
     </div>
@@ -92,6 +93,13 @@ export const IndexPageQuery = graphql`
           type
           skillname {
             name
+            img{
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
             detail
           }
         }
