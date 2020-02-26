@@ -26,10 +26,10 @@ collections:
           - {label: Skill, name: skill, widget: list, fields: [
               {label: Type, name: type, widget: string},
               {label: SkillName, name: skillname, widget: list,
-                fields:[
+                fields: [
                   {label: Name, name: name, widget: string},
-                  {label: Img, name: img, widget: image},
-                  {label: Detail, name: detail, widget: string},
+                  {label: Img, name: img, widget: "image"},
+                  {label: Detail, name: detail, widget: string}
                 ]
               }
             ]}

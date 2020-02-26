@@ -15,7 +15,9 @@ function SkillName(props) {
   );
 
   return (
-    {skills}
+    <div>
+      {skills}
+    </div>
   )
 }
 
