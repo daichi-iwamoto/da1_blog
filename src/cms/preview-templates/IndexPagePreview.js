@@ -4,8 +4,8 @@ import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, widgetFor }) => {
   let data = entry.getIn(['data']).toJS()
-  data.skill.skillname.map((val) =>
-    val.img.childImageSharp.fluid.src = entry.getAsset(val.img)
+  data.skill.map((val) =>
+    val.skillname.img.childImageSharp.fluid.src = entry.getAsset(val.skillname.img)
   )
 
   return (
