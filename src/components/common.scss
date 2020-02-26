@@ -20,12 +20,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .logo {
-      p {
-        font-size: 24px;
-        font-weight: bold;
-      }
-    }
     .links {
       display: flex;
       justify-content: center;
@@ -92,7 +86,9 @@ footer {
 
 #index {
   .mainv {
-    text-align: center;
+    background-color: #eff0f3;
+    height: 340px;
+    width: 100%;
   }
   .contents {
     .intro {

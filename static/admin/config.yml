@@ -25,9 +25,15 @@ collections:
           - {label: Body, name: body, widget: markdown}
           - {label: Skill, name: skill, widget: list, fields: [
               {label: Type, name: type, widget: string},
-              {label: SkillName, name: skillname, widget: list, field:{label: Name, name: Name, widget: string}}
+              {label: SkillName, name: skillname, widget: list,
+                fields:[
+                  {label: Name, name: name, widget: string},
+                  {label: Img, name: img, widget: image},
+                  {label: Detail, name: detail, widget: string},
+                ]
+              }
             ]}
-            
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"

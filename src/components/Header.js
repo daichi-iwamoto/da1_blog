@@ -6,9 +6,7 @@ const Header = class extends React.Component {
     return (
         <header id="header">
             <div className="header-box">
-                <div className="logo">
-                    <p>Da1_blog</p>
-                </div>
+                <div className="logo"></div>
                 <div className="links">
                     {/* <Link to="/blog/"><p><span className="head-text">D</span>eveloper mode</p></Link>
                     <Link to="/blog/"><p><span className="head-text">U</span>sed skills</p></Link> */}

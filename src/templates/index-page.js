@@ -6,14 +6,16 @@ import Content, { HTMLContent } from '../components/Content'
 
 // 関数コンポーネント（skillの各名称）
 function SkillName(props) {
-  const skills = props.skill.map((name) =>
-    <p>{name}</p>
+  const skills = props.skill.map((val) =>
+    <div className="skill-name">
+      <img src={val.img.childImageSharp.fluid.src} alt={val.name} />
+      <p>{val.name}</p>
+      <p>{val.detail}</p>
+    </div>
   );
 
   return (
-    <div className="skill-name">
-      {skills}
-    </div>
+    {skills}
   )
 }
 
@@ -87,7 +89,17 @@ export const IndexPageQuery = graphql`
         title
         skill {
           type
-          skillname
+          skillname {
+            name
+            img{
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            detail
+          }
         }
       }
     }
