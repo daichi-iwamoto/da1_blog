@@ -33,7 +33,7 @@ function Skills(props) {
   return components;
 }
 
-export const IndexPageTemplate = ({ title, content, skill, contentComponent }) => {
+export const IndexPageTemplate = ({ content, skill, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -68,7 +68,6 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
         content={post.html}
         skill={post.frontmatter.skill}
       />

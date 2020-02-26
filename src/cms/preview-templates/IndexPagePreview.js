@@ -6,7 +6,7 @@ const IndexPagePreview = ({ entry, widgetFor, getAsset }) => {
   let data = entry.getIn(['data']).toJS()
   data.skill.map((val) =>
     val.skillname.map((skills) => 
-      skills.img.childImageSharp.fluid.src = getAsset(skills.img)
+      skills.icon.childImageSharp.fluid.src = getAsset(skills.icon)
     )
   )
 
