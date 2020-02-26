@@ -28,7 +28,6 @@ collections:
               {label: SkillName, name: skillname, widget: list,
                 fields: [
                   {label: Name, name: name, widget: string},
-                  {label: Img, name: img, widget: "image"},
                   {label: Detail, name: detail, widget: string}
                 ]
               }

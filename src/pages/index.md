@@ -4,12 +4,10 @@ title: Index
 skill:
   - skillname:
       - name: react
-        img: /img/programming.jpg
         detail: test
     type: フレームワーク
   - skillname:
       - name: Vue
-        img: /img/programming.jpg
         detail: test
     type: フレームワーク
 ---
