@@ -5,7 +5,9 @@ import { IndexPageTemplate } from '../../templates/index-page'
 const IndexPagePreview = ({ entry, widgetFor }) => {
   let data = entry.getIn(['data']).toJS()
   data.skill.map((val) =>
-    val.skillname.img.childImageSharp.fluid.src = entry.getAsset(val.skillname.img)
+    val.skillname.map((skills) => 
+      skills.img.childImageSharp.fluid.src = entry.getAsset(skills.img)
+    )
   )
 
   return (
@@ -15,7 +17,7 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
       skill={data.skill}
     />
   )
-  }
+}
 
 IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
