@@ -8,9 +8,19 @@ import Content, { HTMLContent } from '../components/Content'
 function SkillName(props) {
   const skills = props.skill.map((val) =>
     <div className="skill-name">
-      <img src={val.icon.childImageSharp.fluid.src} alt={val.name} />
-      <p>{val.name}</p>
-      <p>{val.detail}</p>
+      <div className="name">
+        <img src={val.icon.childImageSharp.fluid.src} alt={val.name} />
+        <p>{val.name}</p>
+      </div>
+      <div className="graph-box">
+        <div className="graph"></div>
+      </div>
+      <div className="question-box">
+        <p>?</p>
+      </div>
+      <div class="detail-box">
+        <p>{val.detail}</p>
+      </div>
     </div>
   );
 

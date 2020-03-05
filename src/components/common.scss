@@ -91,6 +91,8 @@ footer {
     width: 100%;
   }
   .contents {
+    width: 1100px;
+    margin: 0 auto;
     .intro {
       display: flex;
       justify-content: center;
@@ -130,24 +132,72 @@ footer {
   .skill-box {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     .skills {
       padding: 15px;
-      background-color: #eff0f3;
-      margin: 30px;
-      width: 250px;
+      width: 100%;
       border-radius: 10px;
 
       .skill-type {
-        text-align: center;
-        font-size: 18px;
+        font-size: 21px;
         padding: 5px 0;
         font-weight: bold;
         color: #636e72;
       }
       .skill-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         font-size: 16px;
-        p {
-          padding-left: 20px;
+        height: 50px;
+        padding-left: 10%;
+        margin-bottom: 15px;
+        .name {
+          width: 20%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          p {
+            padding: 0 20px;
+            font-size: 18px;
+          }
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+        }
+        .graph-box {
+          width: 40%;
+          height: 60%;
+          border-radius: 10px;
+          border: solid 2px #eff0f3;
+          overflow: hidden;
+          .graph {
+            width: 50%;
+            height: 100%;
+            background-color: #ff8ba7;
+          }
+        }
+        .question-box {
+          width: 30%;
+          padding-left: 100px;
+          p {
+            padding: 10px;
+            border-radius: 50%;
+            border: solid 2px #dfe6e9;
+            background-color: #eff0f3;
+            color: #636e72;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .detail-box {
+          display: none;
         }
       }
     }
