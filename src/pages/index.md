@@ -3,14 +3,17 @@ templateKey: index-page
 title: Index
 skill:
   - skillname:
-      - name: react
+      - detail: test
         icon: /img/programming.jpg
-        detail: test
+        name: react
+      - detail: vueチョットデキル
+        icon: /img/tutorials.png
+        name: vue
     type: フレームワーク
   - skillname:
-      - name: Vue
+      - detail: test
         icon: /img/programming.jpg
-        detail: test
+        name: Vue
     type: フレームワーク
 ---
 ひよっこフロントエンジニアのだいちです。
