@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 
 // 関数コンポーネント（skillの各名称）
 function SkillName(props) {
-  const skills = props.skill.map((val) =>
+  const skills = props.names.map((val) =>
     <div className="skill-name">
       <div className="name">
         <img src={val.icon.childImageSharp.fluid.src} alt={val.name} />
@@ -15,10 +15,16 @@ function SkillName(props) {
       <div className="graph-box">
         <div className="graph"></div>
       </div>
-      <div className="question-box">
-        <p>?</p>
+      <div
+        className="question-box"
+      >
+        <p>
+          ?
+        </p>
       </div>
-      <div class="detail-box">
+      <div
+        className="detail-box"
+      >
         <p>{val.detail}</p>
       </div>
     </div>
@@ -31,16 +37,43 @@ function SkillName(props) {
   )
 }
 
-// 関数コンポーネント（スキルの種類）
-function Skills(props) {
-  const components = props.skill.map((skills) =>
-    <div className="skills">
-      <p className="skill-type">{skills.type}</p>
-      <SkillName skill={skills.skillname} />
-    </div>
-  );
+// クラスコンポーネント（スキルの種類）
+class Skills extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hover: false,
+      show: []
+    }
+  }
 
-  return components;
+  componentDidMount = () => {
+    let dust = this.props.skill.map((val) =>
+      this.setState({
+        show: this.state.show.concat([{ [val.name]: {flag: true} }])
+      })
+    );
+  }
+
+  hoverOn = () => {
+    this.setState({ hover: true });
+  }
+
+  hoverOff = () => {
+    this.setState({ hover: false });
+  }
+
+  render() {
+    const components = this.props.skill.map((skills) =>
+      <div className="skills">
+        <p className="skill-type">{skills.type}</p>
+        <SkillName names={skills.skillname} />
+      </div>
+    )
+
+    return components
+  }
+
 }
 
 export const IndexPageTemplate = ({ content, skill, contentComponent }) => {
@@ -65,7 +98,6 @@ export const IndexPageTemplate = ({ content, skill, contentComponent }) => {
 }
 
 IndexPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   skill: PropTypes.array,
@@ -97,7 +129,6 @@ export const IndexPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
         skill {
           type
           skillname {
