@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Index
 skill:
-  - skillname:
+  - skilldata:
       - detail: test
         icon: /img/programming.jpg
         name: react
@@ -10,7 +10,7 @@ skill:
         icon: /img/tutorials.png
         name: vue
     type: フレームワーク
-  - skillname:
+  - skilldata:
       - detail: test
         icon: /img/programming.jpg
         name: Vue

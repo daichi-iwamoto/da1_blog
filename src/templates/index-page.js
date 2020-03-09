@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 // 関数コンポーネント（skillの各名称）
-function SkillName(props) {
+function SkillDatas(props) {
   const skills = props.names.map((val) =>
     <div className="skill-name">
       <div className="name">
@@ -48,11 +48,12 @@ class Skills extends React.Component {
   }
 
   componentDidMount = () => {
-    let dust = this.props.skill.map((val) =>
-      this.setState({
-        show: this.state.show.concat([{ [val.name]: {flag: true} }])
-      })
-    );
+    this.props.skill.map((val) =>
+      alert("hey")
+      // this.setState({
+      //   show: this.state.show.concat([{ [val.skillData.name]: {flag: true} }])
+      // })
+    )
   }
 
   hoverOn = () => {
@@ -67,7 +68,7 @@ class Skills extends React.Component {
     const components = this.props.skill.map((skills) =>
       <div className="skills">
         <p className="skill-type">{skills.type}</p>
-        <SkillName names={skills.skillname} />
+        <SkillDatas names={skills.skilldata} />
       </div>
     )
 
@@ -131,7 +132,7 @@ export const IndexPageQuery = graphql`
       frontmatter {
         skill {
           type
-          skillname {
+          skilldata {
             name
             icon {
               childImageSharp {
