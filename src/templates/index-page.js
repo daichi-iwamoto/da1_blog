@@ -4,29 +4,63 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+// クラスコンポーネント（技術詳細部分）
+class SkillDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false
+    }
+  }
+
+  showToggle = () => {
+    this.setState({
+      show: (this.state.show) ? false : true
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="question-box">
+          <p onClick={this.showToggle}>
+            ?
+          </p>
+        </div>
+        <div
+          className={this.state.show ? 'detail-box active' : 'detail-box'}
+        >
+          <div 
+            className="detail-contents-bg"
+            onClick={this.showToggle}
+          />
+          <div className="detail-contents">
+            <p>{this.props.detail}</p>
+            <div
+              className="detail-contents-close"
+              onClick={this.showToggle}
+            >
+              ×
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
 // 関数コンポーネント（skillの各名称）
 function SkillDatas(props) {
-  const skills = props.names.map((val) =>
+  const skills = props.skilldata.map((val) =>
     <div className="skill-name">
       <div className="name">
         <img src={val.icon.childImageSharp.fluid.src} alt={val.name} />
         <p>{val.name}</p>
       </div>
       <div className="graph-box">
-        <div className="graph"></div>
+        <div className={"graph l-" + val.level}></div>
       </div>
-      <div
-        className="question-box"
-      >
-        <p>
-          ?
-        </p>
-      </div>
-      <div
-        className="detail-box"
-      >
-        <p>{val.detail}</p>
-      </div>
+      <SkillDetail detail={val.detail} />
     </div>
   );
 
@@ -39,42 +73,15 @@ function SkillDatas(props) {
 
 // クラスコンポーネント（スキルの種類）
 class Skills extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false,
-      show: []
-    }
-  }
-
-  componentDidMount = () => {
-    this.props.skill.map((val) =>
-      alert("hey")
-      // this.setState({
-      //   show: this.state.show.concat([{ [val.skillData.name]: {flag: true} }])
-      // })
-    )
-  }
-
-  hoverOn = () => {
-    this.setState({ hover: true });
-  }
-
-  hoverOff = () => {
-    this.setState({ hover: false });
-  }
-
   render() {
     const components = this.props.skill.map((skills) =>
       <div className="skills">
         <p className="skill-type">{skills.type}</p>
-        <SkillDatas names={skills.skilldata} />
+        <SkillDatas skilldata={skills.skilldata} />
       </div>
     )
-
     return components
   }
-
 }
 
 export const IndexPageTemplate = ({ content, skill, contentComponent }) => {
@@ -142,6 +149,7 @@ export const IndexPageQuery = graphql`
               }
             }
             detail
+            level
           }
         }
       }
