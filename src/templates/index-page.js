@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Mainv from '../components/Mainv'
 
 // クラスコンポーネント（技術詳細部分）
 class SkillDetail extends React.Component {
@@ -84,12 +85,12 @@ class Skills extends React.Component {
   }
 }
 
-export const IndexPageTemplate = ({ content, skill, contentComponent }) => {
+export const IndexPageTemplate = ({ content, skill, contentComponent, Mainv }) => {
   const PageContent = contentComponent || Content
 
   return (
     <section id="index">
-      <div className="mainv"></div>
+      <Mainv />
       <div className="contents">
         <div className="intro">
           <div className="da1-img">
@@ -109,6 +110,7 @@ IndexPageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   skill: PropTypes.array,
+  Mainv: PropTypes.instanceOf
 }
 
 const IndexPage = ({ data }) => {
@@ -120,6 +122,7 @@ const IndexPage = ({ data }) => {
         contentComponent={HTMLContent}
         content={post.html}
         skill={post.frontmatter.skill}
+        Mainv={Mainv}
       />
     </Layout>
   )
