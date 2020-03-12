@@ -59,24 +59,7 @@
   70%{
     color: #636e72;
   }
-  80% {
-    background: none;
-    color: #636e72;
-  }
-  81% {
-    background-image: linear-gradient(-45deg, #fff 50%, #ff8ba7 50%, #ff8ba7);
-    background-size: 40px 40px;
-    background-clip: text;
-    color: transparent;
-  }
-  99% {
-    background-image: linear-gradient(-45deg, #fff 50%, #ff8ba7 50%, #ff8ba7);
-    background-size: 40px 40px;
-    background-clip: text;
-    color: transparent;
-  }
   100% {
-    background: none;
     color: #636e72;
   }
 }
@@ -235,6 +218,7 @@ footer {
     }
   }
   .contents {
+    padding: 50px 0;
     width: 1100px;
     margin: 0 auto;
     .intro {
@@ -251,7 +235,7 @@ footer {
       }
       .comment, .comment-bg {
         position: relative;
-        background-color: #fff;
+        background-color: #eff0f3;
         padding: 20px;
         margin-left: 30px;
         border-radius: 10px;
@@ -266,7 +250,7 @@ footer {
           width: 40px;
           height: 30px;
           border-top: solid 15px rgba($color: #000000, $alpha: 0);
-          border-right: solid 20px #fff;
+          border-right: solid 20px #eff0f3;
           border-bottom: solid 15px rgba($color: #000000, $alpha: 0);
           border-left: solid 20px rgba($color: #000000, $alpha: 0);
         }
@@ -396,8 +380,10 @@ footer {
           }
           .detail-contents {
             position: relative;
-            width: 300px;
+            width: 90vw;
+            max-width: 600px;
             background: #fff;
+            border-radius: 5px;
             p {
               padding: 20px;
             }
