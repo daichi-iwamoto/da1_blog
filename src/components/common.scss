@@ -167,7 +167,7 @@ footer {
   margin: 0 auto;
 }
 
-#index {
+#index, #profile {
   .mainv {
     background-color: #eff0f3;
     height: 400px;
@@ -301,7 +301,6 @@ footer {
           height: 60%;
           border-radius: 10px;
           border: solid 2px #eff0f3;
-          overflow: hidden;
           .graph {
             &.l-10{
               width: 10%
@@ -333,8 +332,10 @@ footer {
             &.l-100{
               width: 100%
             }
+            box-shadow: 0px 0px 5px 5px rgba(255,139,167, 0.6);
             height: 100%;
             background-color: #ff8ba7;
+            border-radius: 10px 0 0 10px;
           }
         }
         .question-box {

@@ -28,7 +28,24 @@ collections:
               {label: SkillData, name: skilldata, widget: list,
                 fields: [
                   {label: Name, name: name, widget: string},
-                  {label: Icon, name: icon, widget: "image"},
+                  {label: Detail, name: detail, widget: markdown},
+                  {label: Level, name: level, widget: string}
+                ]
+              }
+            ]}
+      - file: "src/pages/profile/index.md"
+        label: "Profile"
+        name: "profile"
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "profile-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+          - {label: Skill, name: skill, widget: list, fields: [
+              {label: Type, name: type, widget: string},
+              {label: SkillData, name: skilldata, widget: list,
+                fields: [
+                  {label: Name, name: name, widget: string},
                   {label: Detail, name: detail, widget: markdown},
                   {label: Level, name: level, widget: string}
                 ]

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Mainv from '../components/Mainv'
 
 // クラスコンポーネント（技術詳細部分）
 class SkillDetail extends React.Component {
@@ -84,12 +83,11 @@ class Skills extends React.Component {
   }
 }
 
-export const IndexPageTemplate = ({ content, skill, contentComponent, Mainv }) => {
+export const ProfilePageTemplate = ({ content, skill, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section id="index">
-      <Mainv />
+    <section id="profile">
       <div className="contents">
         <div className="intro">
           <div className="da1-img">
@@ -105,37 +103,35 @@ export const IndexPageTemplate = ({ content, skill, contentComponent, Mainv }) =
   )
 }
 
-IndexPageTemplate.propTypes = {
+ProfilePageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  skill: PropTypes.array,
-  Mainv: PropTypes.instanceOf
+  skill: PropTypes.array
 }
 
-const IndexPage = ({ data }) => {
+const ProfilePage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <IndexPageTemplate
+      <ProfilePageTemplate
         contentComponent={HTMLContent}
         content={post.html}
         skill={post.frontmatter.skill}
-        Mainv={Mainv}
       />
     </Layout>
   )
 }
 
 // propTypes 型チェック
-IndexPage.propTypes = {
+ProfilePage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default IndexPage
+export default ProfilePage
 
-export const IndexPageQuery = graphql`
-  query IndexPage($id: String!) {
+export const ProfilePageQuery = graphql`
+  query ProfilePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

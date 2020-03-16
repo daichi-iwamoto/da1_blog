@@ -1,6 +1,6 @@
 ---
-templateKey: index-page
-title: Index
+templateKey: profile-page
+title: Profile
 skill:
   - skilldata:
       - detail: 実務経験2年。実務での使用用途が殆どHTMLテンプレートみたいな物だった為、Classやオブジェクト指向については少し苦手意識があります😅
