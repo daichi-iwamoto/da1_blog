@@ -41,7 +41,6 @@ export default class Index extends React.Component {
         <section id="contact">
           <Header />
           <div className="contents">
-            <h1>Contact</h1>
             <form
               name="contact"
               method="post"
@@ -94,12 +93,11 @@ export default class Index extends React.Component {
                   required={true}
                 />
               </div>
-              <div className="field">
-                <button className="submit-btn" type="submit">
-                  Send
-                </button>
-              </div>
+              <button className="submit-btn" type="submit">
+                Send
+              </button>
             </form>
+            <h1>Contact</h1>
           </div>
           <Footer />
         </section>
