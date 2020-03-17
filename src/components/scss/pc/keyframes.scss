@@ -1,0 +1,99 @@
+@keyframes noise1 {
+  0% {
+    left: 0;
+  }
+
+  68% {
+    left: 0;
+  }
+
+  69% {
+    left: 2%;
+  }
+
+  70% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes noise2 {
+  0% {
+    left: 0;
+  }
+
+  60% {
+    left: 0;
+  }
+
+  61% {
+    left: -2%;
+  }
+
+  62% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes noise3 {
+  0% {
+    color: #636e72;
+    text-shadow: none;
+  }
+
+  60% {
+    color: #636e72;
+  }
+
+  61% {
+    color: #ff8ba7;
+  }
+
+  62% {
+    color: #636e72;
+  }
+
+  68% {
+    color: #636e72;
+  }
+
+  69% {
+    color: #ff8ba7;
+  }
+
+  70% {
+    color: #636e72;
+  }
+
+  100% {
+    color: #636e72;
+  }
+}
+
+@keyframes flexfadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  100% {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+}

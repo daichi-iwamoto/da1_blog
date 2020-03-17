@@ -14,7 +14,7 @@ const TagsPage = ({
 }) => (
   <Layout>
     <section id="tags">
-      <Helmet title={`Tags | ${title}`} />
+      <Helmet title={`Blog Page`} />
       <div className="tag-box">
         <h1>Tags</h1>
         <ul className="taglist">

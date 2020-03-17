@@ -1,0 +1,20 @@
+#contact {
+  padding: 20px 0;
+
+  .contents {
+    width: 1100px;
+    margin: 0 auto;
+
+    form {
+      .field {
+        .input {
+          border-bottom: solid .5px;
+        }
+
+        .submit-btn {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

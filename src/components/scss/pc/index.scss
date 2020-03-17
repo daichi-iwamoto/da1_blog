@@ -1,0 +1,90 @@
+#index {
+  position: relative;
+
+  .page1,
+  .page2,
+  .page3 {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .page1 {
+    background-color: #E1E7EB;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .page2,
+  .page3 {
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+
+    .hover {
+      z-index: 1;
+      text-decoration: none;
+      position: absolute;
+      height: 50%;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .page2 {
+    left: 0;
+
+    .hover {
+      background-color: #AEB8C3;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 200vh;
+        width: 100vw;
+        top: 0;
+        left: 100%;
+        background-color: #AEB8C3;
+        transform-origin: left top;
+        transform: rotate(115deg);
+      }
+    }
+  }
+
+  .page3 {
+    left: 50vw;
+
+    .hover {
+      background-color: #947B89;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 200vh;
+        width: 100vw;
+        top: 0;
+        left: -100vw;
+        background-color: #947B89;
+        transform-origin: right top;
+        transform: rotate(-115deg);
+      }
+    }
+  }
+}

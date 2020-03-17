@@ -1,0 +1,103 @@
+// タグ一覧ページ
+#tags {
+  padding: 50px 0;
+
+  h1 {
+    font-size: 22px;
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .tag-box {
+    ul.taglist {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      li.tag-link {
+        position: relative;
+        text-align: center;
+        list-style: none;
+        margin-right: 10px;
+
+        .hover-link {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #ff4757;
+          color: #fff;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+
+          p {
+            padding: 0 10px;
+            font-size: 12px;
+          }
+        }
+
+        .tagname {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 15px;
+          width: 150px;
+          background-color: #fff;
+          color: #747d8c;
+          border: solid 1px #747d8c;
+          z-index: 2;
+          transform-origin: 100% 100%;
+          transition: 0.3s;
+
+          span {
+            font-size: 12px;
+            color: #fff;
+            padding: 0 5px;
+            margin-left: 10px;
+            background-color: #747d8c;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 15px;
+            height: 15px;
+            border-top: solid 7.5px rgba($color: #000000, $alpha: 0);
+            border-right: solid 7.5px #747d8c;
+            border-bottom: solid 7.5px #747d8c;
+            border-left: solid 7.5px rgba($color: #000000, $alpha: 0);
+          }
+
+          a {
+            color: #747d8c;
+          }
+        }
+
+        &:hover {
+          .tagname {
+            transform: rotate(10deg);
+            color: #ff4757;
+            border: solid 1px #ff4757;
+
+            span {
+              background-color: #ff4757;
+            }
+
+            &::before {
+              border-top: solid 7.5px rgba($color: #000000, $alpha: 0);
+              border-right: solid 7.5px #ff4757;
+              border-bottom: solid 7.5px #ff4757;
+              border-left: solid 7.5px rgba($color: #000000, $alpha: 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
