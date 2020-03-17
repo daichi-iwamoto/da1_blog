@@ -53,7 +53,7 @@ class BlogRoll extends React.Component {
     return (
       <div className="blog-box">
         <section>
-          <h3>New Posts</h3>
+          <h3>New</h3>
           <div className="posts">
           {posts &&
             posts.map(({ node: post }) => (
@@ -69,9 +69,9 @@ class BlogRoll extends React.Component {
                           {post.frontmatter.date}
                         </p>
                       </div>
-                      <p className="post-description">
-                          {post.frontmatter.description}
-                      </p>
+                      <div className="post-description">
+                          <p>{post.frontmatter.description}</p>
+                      </div>
                     </div>
                   </article>
                 </Link>
@@ -79,8 +79,9 @@ class BlogRoll extends React.Component {
           }
           </div>
         </section>
-        <Tags data={posts} tag={"test"} />
-        <Tags data={posts} tag={"code"} />
+        {/* tagごとに取得 */}
+        {/* <Tags data={posts} tag={"test"} />
+        <Tags data={posts} tag={"code"} /> */}
       </div>
     )
   }

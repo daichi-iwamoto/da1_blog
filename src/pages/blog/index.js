@@ -16,7 +16,7 @@ export default class BlogIndexPage extends React.Component {
         <section id="blog">
           <Mainv />
           <h1>
-            Posts
+            Posts<span>&#x1f4ed;</span>
           </h1>
           <section>
             <BlogRoll />

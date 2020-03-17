@@ -2,17 +2,40 @@
   padding: 20px 0;
 
   .contents {
+    font-family: 'Sen', sans-serif;
     width: 1100px;
-    margin: 0 auto;
+    margin: 100px auto;
 
+    h1 {
+      font-size: 38px;
+      padding-bottom: 10px;
+    }
+    
     form {
       .field {
+        font-size: 18px;
+        margin: 15px 10px;
+        label {
+          display: inline-block;
+          width: 20%;
+          text-align: center;
+        }
         .input {
           border-bottom: solid .5px;
+          width: 25%;
+          padding: 5px;
+
+          &.massage-area {
+            height: 150px;
+          }
         }
 
         .submit-btn {
           padding: 10px;
+          background-color: #000;
+          color: #fff;
+          margin-top: 20px;
+          margin-left: 40%;
         }
       }
     }

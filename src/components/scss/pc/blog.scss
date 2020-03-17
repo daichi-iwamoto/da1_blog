@@ -5,24 +5,41 @@
   margin: 0 auto;
 
   .mainv {
-    height: 400px;
+    height: 560px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
 
+    .rotate-box {
+      transform: rotate(-90deg);
+    }
+
     .wrapper {
       font-size: 0;
-      transform: rotate(-90deg);
       backface-visibility: hidden;
+    }
+
+    .description {
+      font-family: 'Sen', sans-serif;
+      line-height: 2;
+      h2 {
+        span {
+          color: #ff8ba7;
+        }
+      }
+      p {
+        line-height: 1.5;
+      }
     }
     
     .text-wrapper {
+      font-family: 'Sen', sans-serif;
       font-weight: bold;
       font-size: 0;
       display: block;
-      font-size: 162px;
+      font-size: 126px;
       
       &.placeholder {
         visibility: hidden;
@@ -71,7 +88,19 @@
 
   h1 {
     padding-bottom: 20px;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 32px;
+    font-family: 'Sen', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after, &::before {
+      content: "";
+      width: 150px;
+      display: block;
+      height: 50%;
+      border-bottom: solid 1px;
+      margin: 0 25px;
+    }
   }
 
   .blog-box {
@@ -80,32 +109,36 @@
 
     section {
       padding: 20px;
-      margin: 0 20px;
     }
   }
 
   h3 {
     font-size: 28px;
-    padding-bottom: 20px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Sen', sans-serif;
   }
 
   .posts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     .blog-link {
-      width: 45%;
+      width: 50%;
       display: block;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
       transition: 0.5s;
+
+      &:first-child {
+        width: 100%;
+      }
 
       article {
         background-color: #fff;
         overflow: hidden;
+        border: solid 10px #000;
+        margin: 5px 0;
 
         .post-data {
+          font-family: 'Sen', sans-serif;
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
@@ -115,7 +148,7 @@
           .post-head {
             position: relative;
             width: 100%;
-            padding: 40px 0;
+            padding: 130px 0;
             color: #fffffe;
 
             .post-img {
@@ -128,7 +161,7 @@
             }
 
             .post-meta {
-              font-size: 20px;
+              font-size: 38px;
               font-weight: bold;
               text-align: center;
               padding-bottom: 5px;
@@ -142,9 +175,30 @@
           }
 
           .post-description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             font-size: 16px;
-            padding: 10px;
+            background-color: white;
             color: #594a4e;
+            opacity: 0;
+            transition-duration: 0.5s
+          }
+        }
+      }
+
+      &:hover {
+        article {
+          .post-data {
+            .post-description {
+              opacity: 1;
+            }
           }
         }
       }
