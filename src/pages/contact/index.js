@@ -41,63 +41,65 @@ export default class Index extends React.Component {
         <section id="contact">
           <Header />
           <div className="contents">
-            <form
-              name="contact"
-              method="post"
-              action="/contact/thanks/"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={this.handleSubmit}
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <div hidden>
-                <label>
-                  <input name="bot-field" onChange={this.handleChange} />
-                </label>
-              </div>
-              <div className="field">
-                <label className="label" htmlFor={'name'}>
-                  Your name
-                </label>
-                <input
-                  className="input"
-                  type={'text'}
-                  name={'name'}
-                  onChange={this.handleChange}
-                  id={'name'}
-                  required={true}
-                />
-              </div>
-              <div className="field">
-                <label className="label" htmlFor={'email'}>
-                  Your Email
-                </label>
-                <input
-                  className="input"
-                  type={'email'}
-                  name={'email'}
-                  onChange={this.handleChange}
-                  id={'email'}
-                  required={true}
-                />
-              </div>
-              <div className="field">
-                <label className="label" htmlFor={'message'}>
-                  Message
-                </label>
-                <textarea
-                  className="input massage-area"
-                  name={'message'}
-                  onChange={this.handleChange}
-                  id={'message'}
-                  required={true}
-                />
-              </div>
-              <button className="submit-btn" type="submit">
-                Send
-              </button>
-            </form>
-            <h1>Contact</h1>
+            <div className="contact-card">
+              <form
+                name="contact"
+                method="post"
+                action="/contact/thanks/"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={this.handleSubmit}
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <div hidden>
+                  <label>
+                    <input name="bot-field" onChange={this.handleChange} />
+                  </label>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'name'}>
+                    Your name
+                  </label>
+                  <input
+                    className="input"
+                    type={'text'}
+                    name={'name'}
+                    onChange={this.handleChange}
+                    id={'name'}
+                    required={true}
+                  />
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'email'}>
+                    Your Email
+                  </label>
+                  <input
+                    className="input"
+                    type={'email'}
+                    name={'email'}
+                    onChange={this.handleChange}
+                    id={'email'}
+                    required={true}
+                  />
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'message'}>
+                    Message
+                  </label>
+                  <textarea
+                    className="input massage-area"
+                    name={'message'}
+                    onChange={this.handleChange}
+                    id={'message'}
+                    required={true}
+                  />
+                </div>
+                <button className="submit-btn" type="submit">
+                  Send
+                </button>
+              </form>
+              <h1>Contact</h1>
+            </div>
           </div>
           <Footer />
         </section>

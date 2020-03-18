@@ -1,60 +1,62 @@
 #contact {
-  padding: 20px 0;
+  padding-top: 20px;
 
   .contents {
-    display: flex;
-    flex-wrap: wrap;
     font-family: 'Sen', sans-serif;
     width: 1100px;
-    margin: 100px auto;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    margin: auto;
 
-    h1 {
+    .contact-card {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-      font-size: 38px;
-      padding-bottom: 10px;
-      background-color: #000;
-      color: #fff;
-    }
-    
-    form {
-      display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      width: 50%;
-      border: solid 1px #000;
-      .field {
-        font-size: 18px;
-        padding: 25px 50px 5px 15px;
-        width: 100%;
-        label {
-          display: inline-block;
-          width: 30%;
-          text-align: center;
-        }
-        .input {
-          border-bottom: solid .5px;
-          width: 70%;
-          padding: 5px;
-
-          &.massage-area {
-            height: 150px;
-          }
-        }
-
-      }
-      .submit-btn {
-        padding: 10px 30px;
-        background-color: #000;
+      margin: 100px auto;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        font-size: 38px;
+        padding-bottom: 10px;
+        background-color: #0d0d0d;
         color: #fff;
-        margin: 35px 0;
-        transition-duration: .3s;
-
-        &:hover {
-          background-color: #ff8ba7;
+      }
+      
+      form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 50%;
+        .field {
+          font-size: 18px;
+          padding: 25px 50px 5px 15px;
+          width: 100%;
+          label {
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+          }
+          .input {
+            border-bottom: solid .5px;
+            width: 70%;
+            padding: 5px;
+  
+            &.massage-area {
+              height: 150px;
+            }
+          }
+  
+        }
+        .submit-btn {
+          padding: 10px 30px;
+          background-color: #0d0d0d;
+          color: #fff;
+          margin: 35px 0;
+          transition-duration: .3s;
+  
+          &:hover {
+            background-color: #ff8ba7;
+          }
         }
       }
     }

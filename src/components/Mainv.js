@@ -40,8 +40,8 @@ export default class Mainv extends React.Component {
         <div className="description">
           <h2>web fr<span>o</span>nt engineer <span>&amp;</span> Japanese <span>o</span>taku bl<span>o</span>g</h2>
           <p>
-            Mainly write technical articles for web front end.<br></br>
-            I can't speak english. Google Translator cheers&#x1f37b;
+            Mainly write technical articles <br className="sp-br" />for web front end.<br />
+            I can't speak english. <br className="sp-br" />Google Translator cheers&#x1f37b;
           </p>
         </div>
       </section>

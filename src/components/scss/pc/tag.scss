@@ -68,10 +68,10 @@
             right: 2px;
             width: 15px;
             height: 15px;
-            border-top: solid 7.5px rgba($color: #000000, $alpha: 0);
+            border-top: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
             border-right: solid 7.5px #747d8c;
             border-bottom: solid 7.5px #747d8c;
-            border-left: solid 7.5px rgba($color: #000000, $alpha: 0);
+            border-left: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
           }
 
           a {
@@ -90,10 +90,10 @@
             }
 
             &::before {
-              border-top: solid 7.5px rgba($color: #000000, $alpha: 0);
+              border-top: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
               border-right: solid 7.5px #ff4757;
               border-bottom: solid 7.5px #ff4757;
-              border-left: solid 7.5px rgba($color: #000000, $alpha: 0);
+              border-left: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
             }
           }
         }

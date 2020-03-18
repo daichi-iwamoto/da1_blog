@@ -12,6 +12,10 @@
     align-items: center;
     overflow: hidden;
 
+    .sp-br {
+      display: none;
+    }
+
     .rotate-box {
       transform: rotate(-90deg);
     }
@@ -134,7 +138,7 @@
       article {
         background-color: #fff;
         overflow: hidden;
-        border: solid 10px #000;
+        border: solid 10px #0d0d0d;
         margin: 5px 0;
 
         .post-data {

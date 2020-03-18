@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Da1_Blog',
+    title: 'front end geeks',
     description:
       'へっぽこフロントエンジニアのポートフォリオ兼ブログサイト',
   },
