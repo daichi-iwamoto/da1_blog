@@ -9,7 +9,7 @@
   }
 
   .page1 {
-    background-color: #E1E7EB;
+    background-color: #fff9f9;
     top: 0;
     left: 0;
     width: 100vw;
@@ -50,7 +50,7 @@
     left: 0;
 
     .hover {
-      background-color: #AEB8C3;
+      background-color: #eaeaea;
 
       &::before {
         content: "";
@@ -60,7 +60,7 @@
         width: 100vw;
         top: 0;
         left: 100%;
-        background-color: #AEB8C3;
+        background-color: #eaeaea;
         transform-origin: left top;
         transform: rotate(115deg);
       }
@@ -71,7 +71,7 @@
     left: 50vw;
 
     .hover {
-      background-color: #947B89;
+      background-color: #ffdee5;
 
       &::before {
         content: "";
@@ -81,7 +81,7 @@
         width: 100vw;
         top: 0;
         left: -100vw;
-        background-color: #947B89;
+        background-color: #ffdee5;
         transform-origin: right top;
         transform: rotate(-115deg);
       }

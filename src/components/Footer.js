@@ -8,6 +8,8 @@ const Footer = class extends React.Component {
         <div className="footer-box">
           <div className="links">
             <Link to="/"><p>Top</p></Link>
+            <Link to="/contact/"><p>Contact</p></Link>
+            <Link to="/profile/"><p>Profile</p></Link>
           </div>
           <div className="links">
             <Link to="/blog/"><p>Blog</p></Link>

@@ -3,6 +3,8 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 const TagsPage = ({
   data: {
@@ -13,6 +15,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
+    <Header />
     <section id="tags">
       <Helmet title={`Blog Page`} />
       <div className="tag-box">
@@ -33,6 +36,7 @@ const TagsPage = ({
         </ul>
       </div>
     </section>
+    <Footer />
   </Layout>
 )
 

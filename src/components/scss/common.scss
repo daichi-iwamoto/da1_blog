@@ -13,6 +13,7 @@
 
 @import './sp/blog';
 @import './sp/contact';
+@import './sp/profile';
 
 html {
   background-color: #0d0d0d;
@@ -20,7 +21,7 @@ html {
   color: #0d0d0d;
   width: 100%;
   body {
-    background-color: #fffffe;
+    background-color: #fefefe;
   }
 }
 
@@ -81,7 +82,7 @@ footer {
       a {
         width: 100%;
         padding-left: 20px;
-        color: #fff;
+        color: #fefefe;
         transition-duration: 0.2s;
         &:hover {
           color: #ff8ba7;
@@ -124,7 +125,7 @@ footer {
         width: 100%;
         a {
           padding-left: 20px;
-          color: #fff;
+          color: #fefefe;
           transition-duration: 0.2s;
           p {
             font-size: 12px;

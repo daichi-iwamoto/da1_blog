@@ -15,7 +15,7 @@ skill:
       - detail: 独学歴1ヵ月。これからはPythonの時代らしいのでちょっと勉強したいと思って始めました。Pythonデキルマンになりたい！
         level: 10
         name: Python
-    type: 言語
+    type: Language
   - skilldata:
       - detail: 独学歴半年。公式チュートリアルを一通り行い、直ぐにGatsbyに手を出してしまったため、ReactでわからないのかGatsbyでわからないのかも分からない時もたまにあります😅個人的に今後はVueよりも力を入れて勉強したいと思っています💪
         level: 30
@@ -29,7 +29,7 @@ skill:
       - detail: 独学歴1年。特に何を作るでもなしに、色々なページを作成したり、機能を試したりして遊びました。VuexもNuxtを触りながらある程度慣れる事ができました💪
         level: 60
         name: Nuxt.js
-    type: フレームワーク
+    type: Framework
   - skilldata:
       - detail: 実務経験2年。GUIとしてSoureTreeを使用していました。コマンドでの操作も基本的なものならできます💪
         level: 80
@@ -43,7 +43,7 @@ skill:
       - detail: 独学歴半年。GatsbyのプロジェクトのHosting先として使用しました。本サイトのHostingもNetlifyで行っています。
         level: 40
         name: Netlify
-    type: その他
+    type: others
 ---
 ひよっこフロントエンジニアのだいちです。
 

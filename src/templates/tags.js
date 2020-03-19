@@ -2,6 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 class TagRoute extends React.Component {
   render() {
@@ -34,6 +36,7 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
+        <Header />
         <section id="tags">
           <Helmet title={`${tag} | ${title}`} />
           <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
@@ -42,6 +45,7 @@ class TagRoute extends React.Component {
             <Link to="/tags/">タグ一覧表示</Link>
           </p>
         </section>
+        <Footer />
       </Layout>
     )
   }

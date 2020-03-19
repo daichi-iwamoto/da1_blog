@@ -4,6 +4,8 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
@@ -61,6 +63,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      <Header />
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -78,6 +81,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         mainv={post.frontmatter.mainv.childImageSharp.fluid.src}
       />
+      <Footer />
     </Layout>
   )
 }
