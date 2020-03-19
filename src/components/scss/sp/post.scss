@@ -1,0 +1,49 @@
+// 記事ページ
+#posts {
+  .title-box {
+    .mainv {
+      max-width: 100%;
+      min-height: 100%;
+    }
+    .post-title {
+      padding: 5px;
+      h1 {
+        font-size: 42px;
+      }
+      p {
+        font-size: 12px;
+        min-width: 120px;
+      }
+    }
+  }
+  .tag-box {
+    width: 90%;
+    ul.taglist {
+      .tag-link {
+        .tagname {
+          a {
+            color: #fefefe;
+          }
+        }
+      }
+    }
+  }
+  .post-body {
+    padding: 25px 10px;
+    width: 90%;
+    p {
+      font-size: 14px;
+    }
+    code {
+      background-color: #ced6e0;
+      padding: 2px 5px;
+    }
+    pre {
+      width: 100%;
+      padding: 20px;
+      code {
+        color: #fefefe;
+      }
+    }
+  }
+}
