@@ -23,9 +23,6 @@ const TagsPage = ({
         <ul className="taglist">
           {group.map(tag => (
             <li className="tag-link" key={tag.fieldValue}>
-              <div className="hover-link">
-                <p>Go!</p>
-              </div>
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                 <p className="tagname">
                   {tag.fieldValue} <span>{tag.totalCount}</span>

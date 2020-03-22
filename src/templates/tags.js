@@ -9,11 +9,11 @@ class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
-      <div className="posts">
-        <div className="hover-box">Read</div>
-        <Link className="blog-link" to={post.node.fields.slug}>
-          <article>
-            <div className="post-data">
+      <Link className="blog-link" to={post.node.fields.slug}>
+        <article>
+          <div className="post-data">
+            <div className="post-head">
+              <img src={post.node.frontmatter.mainv.childImageSharp.fluid.src} alt="post-img" className="post-img" />
               <p className="post-meta">
                 {post.node.frontmatter.title}
               </p>
@@ -24,15 +24,15 @@ class TagRoute extends React.Component {
                 {post.node.frontmatter.date}
               </p>
             </div>
-          </article>
-        </Link>
-      </div>
+          </div>
+        </article>
+      </Link>
     ))
 
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
-    const tagHeader = `【 ${tag} 】タグ一覧（${totalCount}）`
+    const tagHeader = `【 ${tag} 】${totalCount} posts`
 
     return (
       <Layout>
@@ -42,7 +42,9 @@ class TagRoute extends React.Component {
           <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
           <ul className="taglist">{postLinks}</ul>
           <p className="all-tags">
-            <Link to="/tags/">タグ一覧表示</Link>
+            <div className="posts">
+              <Link to="/tags/">All Tag</Link>
+            </div>
           </p>
         </section>
         <Footer />
@@ -75,6 +77,13 @@ export const tagPageQuery = graphql`
             title
             date(formatString: "YYYY/MM/DD")
             description
+            mainv {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }

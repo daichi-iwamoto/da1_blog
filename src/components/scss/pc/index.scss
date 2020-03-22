@@ -17,9 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   .page2,
@@ -39,10 +36,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      &:hover {
-        opacity: 0.8;
-      }
     }
   }
 

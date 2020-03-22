@@ -1,0 +1,35 @@
+@media screen and (max-width: 559px) {
+  #tags {
+    h1::after, h1::before{
+      content: "";
+      width: 50px;
+      display: block;
+      height: 50%;
+      border-bottom: solid 1px;
+      margin: 0 25px;
+    }
+    
+    h3 {
+      font-size: 22px;
+    }
+
+    width: 100%;
+    padding: 60px 0 20px;
+    .taglist {
+      .blog-link {
+        width: 100%;
+        .post-data {
+          .post-head {
+            padding: 50px 0;
+            .post-meta {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+    .all-tags {
+      margin: 10px;
+    }
+  }
+}

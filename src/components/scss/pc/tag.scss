@@ -1,6 +1,7 @@
 // タグ一覧ページ
 #tags {
-  padding: 50px 0;
+  padding: 80px 0;
+  width: 1100px;
 
   h1 {
     font-size: 22px;
@@ -8,95 +9,122 @@
     padding-bottom: 25px;
   }
 
-  .tag-box {
-    ul.taglist {
+  .taglist {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+
+    .tag-link {
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      text-align: center;
+      list-style: none;
+      margin: 0 15px 30px 0;
+      background: #ffa2b7;
+      padding-left: 25px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      .tagname {
+        padding: 10px 20px;
+        min-width: 100px;
+        background-color: #ff8ba7;
+        color: #fefefe;
+        letter-spacing: 1.5px;
+        text-align: left;
+      }
+    }
 
-      li.tag-link {
-        position: relative;
-        text-align: center;
-        list-style: none;
-        margin-right: 10px;
+    .blog-link {
+      width: 50%;
+      display: block;
+      transition: 0.5s;
+      
+      &:first-of-type {
+        width: 100%;
+      }
 
-        .hover-link {
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: #ff4757;
-          color: #fefefe;
-          display: flex;
-          justify-content: flex-start;
-          align-items: flex-end;
+      article {
+        background-color: #fefefe;
+        overflow: hidden;
+        border: solid 10px #0d0d0d;
+        margin: 5px 0;
+      }
+
+      .post-data {
+        font-family: 'Sen', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        color: #33272a;
+
+        .post-head {
+          position: relative;
           width: 100%;
-          height: 100%;
-          z-index: 1;
-
-          p {
-            padding: 0 10px;
-            font-size: 12px;
-          }
-        }
-
-        .tagname {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 15px;
-          width: 150px;
-          background-color: #fefefe;
-          color: #747d8c;
-          border: solid 1px #747d8c;
-          z-index: 2;
-          transform-origin: 100% 100%;
-          transition: 0.3s;
-
-          span {
-            font-size: 12px;
-            color: #fefefe;
-            padding: 0 5px;
-            margin-left: 10px;
-            background-color: #747d8c;
-          }
-
-          &::before {
-            content: "";
+          padding: 130px 0;
+          color: #fefefe;
+          .post-img {
             position: absolute;
-            bottom: 2px;
-            right: 2px;
-            width: 15px;
-            height: 15px;
-            border-top: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
-            border-right: solid 7.5px #747d8c;
-            border-bottom: solid 7.5px #747d8c;
-            border-left: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
-
-          a {
-            color: #747d8c;
+  
+          .post-meta {
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 5px;
+          }
+  
+          .post-description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            background-color: white;
+            color: #594a4e;
+            opacity: 0;
+            transition-duration: 0.3s;
+          }
+  
+          .post-date {
+            font-size: 12px;
+            min-width: 80px;
+            text-align: center;
           }
         }
-
-        &:hover {
-          .tagname {
-            transform: rotate(10deg);
-            color: #ff4757;
-            border: solid 1px #ff4757;
-
-            span {
-              background-color: #ff4757;
-            }
-
-            &::before {
-              border-top: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
-              border-right: solid 7.5px #ff4757;
-              border-bottom: solid 7.5px #ff4757;
-              border-left: solid 7.5px rgba($color: #0d0d0d, $alpha: 0);
+      }
+      &:hover {
+        article {
+          .post-data {
+            .post-description {
+              opacity: 1;
             }
           }
         }
+      }
+    }
+  }
+  .all-tags {
+    .posts {
+      justify-content: flex-end;
+      a {
+        padding: 10px 50px;
+        background-color: #ff8ba7;
+        border-radius: 5px;
+        color: white;
       }
     }
   }
