@@ -1,25 +1,29 @@
 import React from 'react'
+import Helmet from 'react-helmet'
+
 import Layout from '../components/Layout'
-import { Link } from 'gatsby'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import BlogRoll from '../components/BlogRoll'
+import Mainv from '../components/Mainv'
 
-const TestPage = () => (
-  <Layout>
-    <section id="index">
-      <div className="page2">
-        <Link to="/profile/" className="hover">
-          <div className="text">P</div>
-        </Link>
-      </div>
-      <div className="page3">
-        <Link to="/contact/" className="hover">
-          <div className="text">C</div>
-        </Link>
-      </div>
-      <Link to="/blog/" className="page1">
-        <div className="text">B</div>
-      </Link>
-    </section>
-  </Layout>
-)
-
-export default TestPage
+export default class BlogIndexPage extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <Helmet title={`Blog`} />
+        <Header />
+        <section id="blog">
+          <Mainv />
+          <h1>
+            Posts<span>&#x1f4ed;</span>
+          </h1>
+          <section>
+            <BlogRoll />
+          </section>
+        </section>
+        <Footer />
+      </Layout>
+    )
+  }
+}
