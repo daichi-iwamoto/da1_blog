@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/og-image.png`}
+          content={`${withPrefix('/')}img/ogp.png`}
         />
       </Helmet>
       <div id="contents">{children}</div>
