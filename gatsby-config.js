@@ -5,6 +5,13 @@ module.exports = {
       'へっぽこフロントエンジニアのポートフォリオ兼ブログサイト',
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-161591263-1",
+        head: true,
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-catch-links',
