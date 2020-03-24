@@ -17,7 +17,7 @@ VueやReactなどの新しいフレームワークに夢中になっている間
 今回はnpm（Node.jsのパッケージマネージャー）を使用して導入をしていきます。Windows環境です
 下記コマンドをbash等のターミナルで叩いてみましょう。
 
-```
+```bash
 npm install -g typescript
 ```
 
@@ -27,7 +27,7 @@ npm install -g typescript
 ## TypeScriptを書いてコンパイルしてみる
 コマンド一つで導入できてしまったので、とりあえずTypeScriptを書いてみます。
 `test.ts`というファイルを作成して、下記の様なコードを書いてみましょう。
-```
+```javascript
 function hello(name: string) {
   return "Hello! " + name + "!";
 }
@@ -40,14 +40,14 @@ console.log(hello(you));
 一旦脳死でコピーしてください。
 
 次に、作成した`test.ts`をコンパイルしていきます。下記コマンドを叩いてみましょう。
-```
+```bash
 tsc test.ts
 ```
 すると、`test.ts`を作成した同一ディレクトリに、`test.js`というJavaScriptの形式に
 されたファイルが出現するはずです。これでコンパイルも完了。
 
 では、実際にコードを実行してみましょう。ターミナルで下記の様にコマンドを叩いてみてください。
-```
+```bash
 node [該当のパス]/test.js
 ```
 
@@ -65,7 +65,7 @@ string以外の型して、再度コンパイルしてみましょう。する�
 
 ## TypeScriptの「インターフェース」について
 先ほど作成した`test.ts`を下記の様に改造してみましょう。
-```
+```javascript
 interface Person {
   firstName: string;
   lastName: string; 
@@ -81,3 +81,23 @@ console.log(hello(you));
 ```
 私の様な「オブジェクト指向浅瀬ちゃぷちゃぷ勢」の為に解説。
 `function hello(person: Person)`の`Person`というのがインターフェースになります。
+
+
+## TypeScript 環境構築編
+
+使用ツールはこんな感じ↓
+* npm (Node.js)
+* webpack
+
+まずはディレクトリを作成して、`npm init`しましょう。
+私の場合は、`TypeScript-Test`というディレクトリを作成しました。
+```bash
+mkdir TypeScript-Test
+cd TypeScript-Test
+npm init
+```
+
+次にTypeScriptコンパイラ・ローダーのインストールを行います。
+```bash
+npm install --save-dev typescript ts-loader
+```

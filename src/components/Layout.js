@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet'
 import './scss/common.scss'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import "prismjs/themes/prism-okaidia.css"
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

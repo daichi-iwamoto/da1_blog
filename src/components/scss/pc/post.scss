@@ -87,7 +87,6 @@
       border-bottom: solid 2px
     }
     code {
-      background-color: #ffa2b7;
       padding: 2px 5px;
       margin: 0 3px;
       border-radius: 3px;
@@ -95,14 +94,7 @@
     pre {
       width: 100%;
       max-width: 100%;
-      overflow: auto;
-      padding: 20px;
-      margin: 15px 0;
-      background-color: #2f3542;
-      code {
-        background-color: #2f3542;
-        color: #fefefe;
-      }
+      border-radius: 0;
     }
     blockquote {
       padding: 10px;
