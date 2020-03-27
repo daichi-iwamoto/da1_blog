@@ -61,9 +61,6 @@
         position: absolute;
         top: 0;
         white-space: nowrap;
-        animation-name: noise3;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
       }
 
       @for $i from 1 through 20 {

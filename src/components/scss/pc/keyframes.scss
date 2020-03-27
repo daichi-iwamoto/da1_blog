@@ -8,7 +8,7 @@
   }
 
   69% {
-    left: 2%;
+    left: 5%;
   }
 
   70% {
@@ -25,55 +25,20 @@
     left: 0;
   }
 
-  60% {
+  65% {
     left: 0;
   }
 
-  61% {
-    left: -2%;
+  66% {
+    left: -5%;
   }
 
-  62% {
+  67% {
     left: 0;
   }
 
   100% {
     left: 0;
-  }
-}
-
-@keyframes noise3 {
-  0% {
-    color: #0d0d0d;
-    text-shadow: none;
-  }
-
-  60% {
-    color: #0d0d0d;
-  }
-
-  61% {
-    color: #ff8ba7;
-  }
-
-  62% {
-    color: #0d0d0d;
-  }
-
-  68% {
-    color: #0d0d0d;
-  }
-
-  69% {
-    color: #ff8ba7;
-  }
-
-  70% {
-    color: #0d0d0d;
-  }
-
-  100% {
-    color: #0d0d0d;
   }
 }
 

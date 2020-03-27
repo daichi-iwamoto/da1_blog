@@ -11,7 +11,7 @@ export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`Blog`} />
+        <Helmet title={`Da1-blog`} />
         <Header />
         <section id="blog">
           <Mainv />

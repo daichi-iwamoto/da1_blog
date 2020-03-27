@@ -80,6 +80,7 @@
       font-size: 16px;
       line-height: 1.9;
       letter-spacing: 1px;
+      padding: 8px 0;
     }
     h2 {
       margin: 50px 20px 15px;
@@ -95,6 +96,25 @@
       width: 100%;
       max-width: 100%;
       border-radius: 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding: 5px 0 5px 50px;
+      background-color: #f4f4f4;
+      color: #272822;
+    }
+    table {
+      margin: 20px;
+      border-collapse: collapse;
+      border-spacing: 0;
+      color: #4b4b4b;
+      th {
+        background-color: #f4f4f4;
+      }
+      th, td {
+        padding: 5px;
+        border: solid 1px #959595;
+      }
     }
     blockquote {
       padding: 10px;
