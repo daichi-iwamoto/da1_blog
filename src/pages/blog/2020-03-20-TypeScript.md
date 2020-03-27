@@ -3,7 +3,7 @@ templateKey: blog-post
 mainv: /img/programming.jpg
 title: 【2020年】いまさら始めるTypeScript入門【npm-script】
 date: 2020-03-27T09:24:05.569Z
-description: 【2020年】いまさら始めるTypeScript入門【npm-script】。簡単なTypeScriptを実際に実装してみます。この記事を書き始めた際は、webpackを用いて開発環境を構築する手順の紹介を使用かと思ったのですが、調べているうちに「純粋にTypeScriptだけを導入するだけならばnpm-scriptだけで環境構築ができるのでは？」と思ったので、npm-scriptでコンパイルを行う方法を紹介します。
+description: 【2020年】いまさら始めるTypeScript入門【npm-script】。簡単なTypeScriptを実際に実装してみます。この記事を書き始めた際は、webpackを用いて開発環境を構築する手順の紹介をしようかと思ったのですが、調べているうちに「純粋にTypeScriptだけを導入するだけならばnpm-scriptだけで環境構築ができるのでは？」と思ったので、npm-scriptでコンパイルを行う方法を紹介します。
 featuredpost: true
 featuredimage: /img/apple-touch-icon.png
 tags:
