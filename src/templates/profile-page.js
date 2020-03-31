@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import DaichiImage from '../components/DaichiImg'
 import Content, { HTMLContent } from '../components/Content'
 import { Link } from 'gatsby'
 
@@ -109,9 +110,7 @@ export const ProfilePageTemplate = ({ content, skill, contentComponent }) => {
       <div className="contents">
         <h1>Profile</h1>
         <div className="intro">
-          <div className="da1-img">
-            <div></div>
-          </div>
+          <DaichiImage />
           <PageContent className="comment" content={content} />
         </div>
         <section className="skill-box">
