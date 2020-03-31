@@ -1,10 +1,6 @@
 import React from 'react'
 
 class LoopText extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let Texts = [];
     for (let i = 0; i < this.props.count; i++) {

@@ -3,7 +3,6 @@ import Layout from '../../components/Layout'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { useStaticQuery, graphql } from "gatsby"
-import Img from 'gatsby-image'
 
 export default () => {
   const data = useStaticQuery(graphql`
