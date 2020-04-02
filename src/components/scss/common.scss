@@ -25,6 +25,16 @@ html {
   }
 }
 
+#contents {
+  overflow: hidden;
+  #contents-wrapper {
+    animation-name: openinng;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+}
+
 header, footer {
   font-family: 'Sen', sans-serif;
 }

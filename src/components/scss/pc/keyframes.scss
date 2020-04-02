@@ -62,3 +62,100 @@
     opacity: 1;
   }
 }
+
+@keyframes graph-10 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@keyframes graph-20 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes graph-30 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes graph-40 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes graph-50 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes graph-60 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes graph-70 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes graph-80 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes graph-90 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes graph-100 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+// オープニング
+@keyframes openinng {
+  0%{
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  99%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
