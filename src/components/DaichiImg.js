@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 export default () => {
   const data = useStaticQuery(graphql`
     query DaichiQuery {
-      file(relativePath: { eq: "daichi.JPEG" }) {
+      file(relativePath: { eq: "daichi.png" }) {
         childImageSharp {
           fluid {
             src
