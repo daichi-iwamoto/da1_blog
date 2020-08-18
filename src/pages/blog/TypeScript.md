@@ -8,6 +8,7 @@ featuredpost: true
 featuredimage: /img/apple-touch-icon.png
 tags:
   - Technical article
+  - TypeScript
 ---
 
 VueやReactなどの新しいフレームワークに夢中になっている間、ずっと見て見ぬふりをしてきたTypeScript。
