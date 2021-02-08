@@ -72,7 +72,7 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-            <link rel="canonical" href="https://noob-front-end-engineer-blog.com/typescript-npm-script/" />
+            <link rel="canonical" href="https://noob-front-end-engineer-blog.com/typescript-npm-scripts/" />
           </Helmet>
         }
         date={post.frontmatter.date}
